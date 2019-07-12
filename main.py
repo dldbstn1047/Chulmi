@@ -58,14 +58,4 @@ if __name__ == '__main__':
     scheduler.start()
     db.init_app(app)
 
-    #### 테스트용
-    user = User.query.filter_by(channel='CKY743NSW').first()
-    user.step = -1
-    user.talk_subject = 0
-    user.set_new_alarm = False
-    user.location = 'no location'
-    user.message = 'TEST 메세지'
-    db.session.commit()
-    ####
-
     app.run('0.0.0.0', port=5000)
