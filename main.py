@@ -7,11 +7,11 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:dbstnWkd@127.0.0.1:3306/chulimi?charset=utf8'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:--------@127.0.0.1:3306/chulimi?charset=utf8'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-SLACK_TOKEN = 'xoxb-677120743489-689181830420-NAW0CLWVY1xG5EaPMs05l5t2'
-SLACK_SIGNING_SECRET = '61b80d4cdd52adff6a928f0ea03028b9'
+SLACK_TOKEN = '----------'
+SLACK_SIGNING_SECRET = '----------'
 
 slack_events_adaptor = SlackEventAdapter(SLACK_SIGNING_SECRET, "/listening", app)
 slack_web_client = WebClient(token=SLACK_TOKEN)
